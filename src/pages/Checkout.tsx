@@ -19,7 +19,7 @@ function Checkout() {
         </div>
       ))}
 
-      <div className="mt-4 font-bold">Total: ${total}</div>
+      <div className="mt-4 font-bold">Total: ${total.toFixed(2)}</div>
     </div>
   )
 }

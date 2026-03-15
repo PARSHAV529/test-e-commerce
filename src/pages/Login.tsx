@@ -8,6 +8,10 @@ import { useEffect } from "react"
 export default function LoginPage() {
   const dispatch = useDispatch<AppDispatch>()
   const navigate = useNavigate()
+  const token = localStorage.getItem("token")
+  if (token) {
+    navigate("/")
+  }
 
   const { user, error, loading } = useSelector((state: RootState) => state.auth)
 
